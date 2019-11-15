@@ -4,20 +4,15 @@
 
 Pull Image:
 ```
-docker pull ubuntu:eoan
+docker build -t github-runner-image .
 ```
 
 Start Container:
 ```
-docker run -d -t --name=github-runner ubuntu:eoan
+docker run -d -t --name=github-runner github-runner-image:latest
 ```
 
-Install curl
-```
-apt update && apt -y install curl && apt -y install nodejs
-```
-
-Add user
+Add user und switch to user
 ```
 adduser slave
 su - slave
