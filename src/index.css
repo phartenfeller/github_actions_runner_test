@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(0, 0%, 96%);
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 56px;
+  color: hsl(274, 100%, 44%);
+  text-shadow: 3px 3px hsl(274, 20%, 67%);
+}
+
+.explain {
+  font-size: 32px;
+}
+
+.explain-num {
+  color: hsl(274, 100%, 44%);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input[type="number"] {
+  margin-top: 48px;
+  padding: 12px;
+  background-color: hsl(0, 0%, 88%);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  font-size: 22px;
+}
+
+input[type="number"]:focus {
+  outline: 0 !important;
+  border: 2px solid hsl(274, 100%, 78%);
+}
+
+button {
+  margin-left: 12px;
+  border-radius: 2px;
+  padding: 12px;
+  background-color: hsl(274, 100%, 44%);
+  color: white;
+  font-size: 22px;
+  border-radius: 6px;
+}
+
+button:hover {
+  box-shadow: 0px 3px 4px #7b7a7a7a;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+button:active {
+  outline: 0 !important;
+  background-color: hsl(274, 100%, 34%);
+  box-shadow: 0px 3px 4px #7b7a7a7a inset;
+}
+
+.result-div {
+  margin-top: 48px;
+  font-size: 36px;
+}
+
+.result {
+  margin-left: 12px;
+  font-weight: bold;
+  color: hsl(274, 100%, 44%);
+}
