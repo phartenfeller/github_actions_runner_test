@@ -4,25 +4,19 @@ on: [push]
 
 jobs:
   build:
-    runs-on: [ubuntu-latest, windows-latest]
+    runs-on: self-hosted
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 13.x]
+        node-version: [12.x]
 
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/cache@v1
-        id: cacheNodeModules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: yarn install
-        if: steps.cacheNodeModules.outputs.cahe-hit != 'true'
         run: |
           npm install -g yarn
           yarn install
@@ -30,6 +24,6 @@ jobs:
           CI: true
       - name: test
         run: |
-          npm run test
+          yarn test
         env:
           CI: true
