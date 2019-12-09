@@ -1,1 +1,5 @@
+# ignore all
 **
+
+# Allow files and directories
+!/entry.sh

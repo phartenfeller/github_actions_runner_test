@@ -14,8 +14,8 @@ docker run -d -t --name=github-runner github-runner-image:latest
 
 Add user und switch to user
 ```
-adduser slave
-su - slave
+adduser runner
+su - runner
 ```
 
 ## Setup Runner
