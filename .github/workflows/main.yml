@@ -1,0 +1,17 @@
+name: Test my app
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Yarn Install
+      run: yarn install
+    - name: Test
+      run: yarn test
+      env:
+        CI: true
