@@ -1,0 +1,16 @@
+name: Test my React App
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: install dependencies
+      run: yarn install
+    - name: test app
+      run: yarn test
+      env:
+        CI: true
